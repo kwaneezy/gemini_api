@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini is FREE!</title>
+    <title>My chatbox</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <label for="userInput">
-    <textarea id="userInput" 
-    name="userInput" 
-    cols="33" rows="7" 
-    placeholder="write to Gemini ...."></textarea>
-    <button id="submit">Send to Gemini!</button>
+    <!-- Response area at the top -->
     <p id="geminiResponse"></p>
+    
+    <!-- Input area at the bottom -->
+    <label for="userInput">
+        <textarea id="userInput" 
+        name="userInput" 
+        cols="33" rows="7" 
+        placeholder="write to Gemini ...."></textarea>
+        <button id="submit">Send to Gemini!</button>
+    </label>
+    
     <script src="frontendScript.js"></script>
 </body>
 </html>
