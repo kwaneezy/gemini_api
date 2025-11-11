@@ -9,18 +9,18 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = 3000;
 
-// ✅ 1️⃣ Always parse JSON before defining routes
+// Always parse JSON before defining routes
 app.use(express.json());
 
-// ✅ 2️⃣ Serve static files
+// Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// ✅ 3️⃣ Root route
+// Root route
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// ✅ 4️⃣ Gemini route
+// Gemini route
 app.post('/gemini', async (req, res) => {
   try {
     const { userQuery } = req.body;
@@ -43,5 +43,5 @@ app.post('/gemini', async (req, res) => {
   }
 });
 
-// ✅ 5️⃣ Start server
+// Start server
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
