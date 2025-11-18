@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My chatbox</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Sign-In Library -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
+    <!-- Google Sign-In Button in top right -->
+    <div id="auth-container">
+        <div id="google-signin-button"></div>
+        <div id="user-info" style="display: none;">
+            <img id="user-avatar" src="" alt="User Avatar">
+            <span id="user-name"></span>
+            <button id="signout-button">Sign Out</button>
+        </div>
+    </div>
+
     <!-- Response area at the top -->
     <p id="geminiResponse"></p>
     
